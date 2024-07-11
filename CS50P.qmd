@@ -1,0 +1,40 @@
+---
+title: "CS50P Harvard Course"
+format: html
+---
+
+# Computer Science with Python
+
+## Python Introduction--Lecture 0
+
+### VS Code Editor
+
+### Functions
+
+### Bugs
+
+### First Program: "Hello World!"
+
+#### Variables
+
+#### Comments
+
+#### Pseudocode
+
+### First program improvements
+
+### Strings and parameters
+
+### Strings formating
+
+### Integers
+
+### Readability
+
+### Floats
+
+### Def (functions)
+
+### Returning values
+
+## Summary
