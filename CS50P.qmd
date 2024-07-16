@@ -23,7 +23,7 @@ How I actually do it: There's atriangle facing to the right with a bug.  Press i
 
 ### Functions
 
-The material took the `print("args")` function with some arguments ("args") to show what it does: It just prints on the console or terminal.
+The material took the `print("args")` function with some arguments ("args") to show what it does: It just prints on the console or terminal. I guess more on functions later...
 
 ### Bugs
 
