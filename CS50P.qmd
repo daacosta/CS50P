@@ -11,6 +11,16 @@ I am surprised that the theme littlebits doesn't highlight correctly qmd files..
 
 ### VS Code Editor
 
+VS Code is a text editor that has a **compiler**. At the top, you'll notice a text editor. At the bottom, there's a terminal where commands are executed. In the terminal, you can execute `code hello.py`  to start coding. In the text editor above, you can type `print("hello, world")`. This the program that all coders write while learning to program.
+
+In the terminal window, you can execute commands. To run this program, you are going to need to move your cursor to the bottom of the screen, clicking in the terminal window. You can now type a second command in the terminal window. Next to the dollar sign, type `python hello.py` and press the enter key on your keyboard.
+
+Recall that computers really only understand zeros and ones. Therefore, when you run python hello.py, python will interpret the text that you created in hello.py and translate it into the zeros and ones that the computer can understand.
+The result of running the `python hello.py` program is `hello, world`.
+Congrats! You just created your first program.
+
+How I actually do it: There's atriangle facing to the right with a bug.  Press it with the .py program open and you'll be fine.
+
 ### Functions
 
 ### Bugs
