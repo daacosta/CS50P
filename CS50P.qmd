@@ -27,6 +27,8 @@ The material took the `print("args")` function with some arguments ("args") to s
 
 ### Bugs
 
+Errors in the program... Nothing to see here... A parenthesis not closed a syntax error... This is part of the process and debugging the program is a must.
+
 ### First Program: "Hello World!"
 
 #### Variables
