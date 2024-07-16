@@ -39,9 +39,23 @@ This was simple and I am OK with it.
 
 #### Variables
 
+Variables are containers for values or strings we are saving momentarily (unles it can't be modified).  The following code is offered:
+
+```{python}
+
+name = input("What's your name? ")
+print("hello, name")
+```
+
+Asignation takes place with the equal sign.  Here we are also *inputing* a variable...
+
 #### Comments
 
+Comments can be added to the code with the numeral sign.
+
 #### Pseudocode
+
+Pretty nuch comments on what is the program doing... A to do list...
 
 ### First program improvements
 
