@@ -31,6 +31,11 @@ Errors in the program... Nothing to see here... A parenthesis not closed a synta
 
 ### First Program: "Hello World!"
 
+```{python}
+
+print("Hello world!")
+```
+
 #### Variables
 
 #### Comments
