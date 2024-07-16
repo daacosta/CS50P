@@ -15,13 +15,15 @@ VS Code is a text editor that has a **compiler**. At the top, you'll notice a te
 
 In the terminal window, you can execute commands. To run this program, you are going to need to move your cursor to the bottom of the screen, clicking in the terminal window. You can now type a second command in the terminal window. Next to the dollar sign, type `python hello.py` and press the enter key on your keyboard.
 
-Recall that computers really only understand zeros and ones. Therefore, when you run python hello.py, python will interpret the text that you created in hello.py and translate it into the zeros and ones that the computer can understand.
+When you run `python hello.py`, python will interpret the text that you created in hello.py and translate it into the zeros and ones that the computer can understand.
 The result of running the `python hello.py` program is `hello, world`.
 Congrats! You just created your first program.
 
-How I actually do it: There's atriangle facing to the right with a bug.  Press it with the .py program open and you'll be fine.
+How I actually do it: There's atriangle facing to the right with a bug.  Press it with the .py program open and you'll be fine.  This corresponds to Run and Debug and it works fine.
 
 ### Functions
+
+The material took the `print("args")` function with some arguments ("args") to show what it does: It just prints on the console or terminal.
 
 ### Bugs
 
