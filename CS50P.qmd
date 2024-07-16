@@ -35,7 +35,7 @@ Errors in the program... Nothing to see here... A parenthesis not closed a synta
 
 print("Hello world!")
 ```
-This was simple and I an OK with it.
+This was simple and I am OK with it.
 
 #### Variables
 
