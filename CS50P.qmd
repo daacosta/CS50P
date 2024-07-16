@@ -5,6 +5,8 @@ format: html
 
 # Computer Science with Python
 
+I am surprised that the theme littlebits doesn't highlight correctly qmd files... I must change the theme right now.
+
 ## Python Introduction--Lecture 0
 
 ### VS Code Editor
