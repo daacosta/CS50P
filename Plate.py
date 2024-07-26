@@ -23,6 +23,13 @@ string = input("Plate: ")
 
 d = True
 
+alpha = 0
+for i in string:
+    if (i.isalpha()):
+        alpha+=1
+digits = len(string)-alpha
+print(digits)
+
 if len(string) < 2 or len(string) > 6:
     d = False
 elif string[0] not in Alphabet:
