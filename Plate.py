@@ -29,7 +29,15 @@ elif string[0] not in Alphabet:
     d = False
 elif string[1] not in Alphabet:
     d = False
-elif any(ele in Punctuation_set for ele in string):
+elif string[2] == "0":
+    d = False
+elif string[2] in Alphabet and string[3] == "0":
+    d = False
+elif string[2] in Alphabet and string[3] in Alphabet and string[4] == "0":
+    d = False
+elif string[2] in Alphabet and string[3] in Alphabet and string[4] in Alphabet and string[5] == "0":
+    d = False
+elif any(x in Punctuation_set for x in string):
     d = False
 
 print(d)
