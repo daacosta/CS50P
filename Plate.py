@@ -18,7 +18,6 @@ for i in string:
     if (i in Alphabet):
         alpha+=1
 digits = len(string)-alpha
-print(digits)
 
 if len(string) < 2 or len(string) > 6:
     d = False
@@ -26,19 +25,19 @@ elif string[0] not in Alphabet:
     d = False
 elif string[1] not in Alphabet:
     d = False
-elif string[2] == "0":
+elif len(string) > 2 and string[2] == "0":
     d = False
-elif string[2] in Alphabet and string[3] == "0":
+elif len(string) > 3 and string[2] in Alphabet and string[3] == "0":
     d = False
-elif string[2] in Alphabet and string[3] in Alphabet and string[4] == "0":
+elif len(string) > 4 and string[2] in Alphabet and string[3] in Alphabet and string[4] == "0":
     d = False
-elif string[2] in Alphabet and string[3] in Alphabet and string[4] in Alphabet and string[5] == "0":
+elif len(string) > 5 and string[2] in Alphabet and string[3] in Alphabet and string[4] in Alphabet and string[5] == "0":
     d = False
 elif any(x in Punctuation_set for x in string):
     d = False
-elif digits == 4:
+elif len(string) > 5 and digits == 4:
     d = True
-elif digits == 3 and string[2] in Alphabet:
+elif len(string) >= 5 and digits == 3 and string[2] in Alphabet:
     d = True
 elif digits == 2 and string[2] in Alphabet and string[3] in Alphabet:
     d = True
