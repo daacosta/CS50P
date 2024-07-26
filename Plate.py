@@ -4,20 +4,10 @@ Alphabetlist = [chr(i) for  i in range(97, 123)]
 Alphabet_lower = "".join(Alphabetlist)
 Alphabet_upper = Alphabet_lower.upper()
 Alphabet_complete = Alphabet_lower + Alphabet_upper
-
 Alphabet = set(Alphabet_complete)
-
-print(Alphabet)
-
 Numbers = set([x for x in range(0, 10)])
-
-print(Numbers)
-
 Punctuation = string.punctuation
 Punctuation_set = set([ x for x in Punctuation])
-
-print(Punctuation_set)
-
 
 string = input("Plate: ")
 
@@ -25,7 +15,7 @@ d = True
 
 alpha = 0
 for i in string:
-    if (i.isalpha()):
+    if (i in Alphabet):
         alpha+=1
 digits = len(string)-alpha
 print(digits)
@@ -46,6 +36,17 @@ elif string[2] in Alphabet and string[3] in Alphabet and string[4] in Alphabet a
     d = False
 elif any(x in Punctuation_set for x in string):
     d = False
+elif digits == 4:
+    d = True
+elif digits == 3 and string[2] in Alphabet:
+    d = True
+elif digits == 2 and string[2] in Alphabet and string[3] in Alphabet:
+    d = True
+elif digits == 1 and string[len(string)-1] in Numbers:
+    d = True
+else:
+    d = True
+
 
 print(d)
 
