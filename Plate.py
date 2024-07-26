@@ -41,3 +41,28 @@ elif any(x in Punctuation_set for x in string):
     d = False
 
 print(d)
+
+# def main():
+#     plate = input("Plate: ")
+#     if is_valid(plate):
+#         print("Valid")
+#     else:
+#         print("Invalid")
+        
+# Alphabetlist = [chr(i) for  i in range(97, 123)]
+# Alphabet_lower = "".join(Alphabetlist)
+# Alphabet_upper = Alphabet_lower.upper()
+# Alphabet_complete = Alphabet_lower + Alphabet_upper
+
+# Alphabet = set(Alphabet_complete)
+# Numbers = set([x for x in range(0, 10)])
+
+# def is_valid(s):
+#     d = True
+#     if len(s) < 2 or len(s) > 6:
+#         d = False
+#     elif s[0] not in Alphabet and s[1] not in Alphabet:
+#         d = False
+#     return d
+        
+# main()
