@@ -42,6 +42,8 @@ elif any(x in Punctuation_set for x in string):
 
 print(d)
 
+# import string
+#
 # def main():
 #     plate = input("Plate: ")
 #     if is_valid(plate):
@@ -56,6 +58,8 @@ print(d)
 
 # Alphabet = set(Alphabet_complete)
 # Numbers = set([x for x in range(0, 10)])
+# Punctuation = string.punctuation
+# Punctuation_set = set([ x for x in Punctuation])
 
 # def is_valid(s):
 #     d = True
