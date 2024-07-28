@@ -9,71 +9,65 @@ Numbers = set([x for x in range(0, 10)])
 Punctuation = string.punctuation
 Punctuation_set = set([ x for x in Punctuation])
 
-string = input("Plate: ")
+plate = input("Plate: ")
 
-d = True
-
-alpha = 0
-for i in string:
-    if (i in Alphabet):
-        alpha+=1
-digits = len(string)-alpha
-
-if len(string) < 2 or len(string) > 6:
-    d = False
-elif string[0] not in Alphabet:
-    d = False
-elif string[1] not in Alphabet:
-    d = False
-elif len(string) > 2 and string[2] == "0":
-    d = False
-elif len(string) > 3 and string[2] in Alphabet and string[3] == "0":
-    d = False
-elif len(string) > 4 and string[2] in Alphabet and string[3] in Alphabet and string[4] == "0":
-    d = False
-elif len(string) > 5 and string[2] in Alphabet and string[3] in Alphabet and string[4] in Alphabet and string[5] == "0":
-    d = False
-elif any(x in Punctuation_set for x in string):
-    d = False
-elif len(string) > 5 and digits == 4:
+def plate_length(s):
     d = True
-elif len(string) >= 5 and digits == 3 and string[2] in Alphabet:
-    d = True
-elif digits == 2 and string[2] in Alphabet and string[3] in Alphabet:
-    d = True
-elif digits == 1 and string[len(string)-1] in Numbers:
-    d = True
-else:
-    d = True
+    if len(s) < 2:
+        d = False
+    elif len(s) > 6:
+        d = False
+    else:
+        d = True
+    return d
 
-
-print(d)
-
-# import string
-#
-# def main():
-#     plate = input("Plate: ")
-#     if is_valid(plate):
-#         print("Valid")
-#     else:
-#         print("Invalid")
+def first_two_characters(s):
+    d = True
+    if plate_length(s):
+        if s[0] in Alphabet and s[1] in Alphabet:
+            d = True
+        else:
+            d = False
+    else:
+        d = False
+    return d
+    
+def no_punctuation_symbols(s):
+    d = True
+    if plate_length(s) and first_two_characters(s):
+        if any(x in Punctuation_set for x in s):
+            d = False
+        else:
+            d = True
+    else:
+        d = False
+    return d
+    
+def count_digits(s):
+    if no_punctuation_symbols(s):
+        alpha = 0
+        for i in s:
+            if (i in Alphabet):
+                alpha+=1
+        digits = len(s)-alpha
+        return digits
+    else:
+        return -1
         
-# Alphabetlist = [chr(i) for  i in range(97, 123)]
-# Alphabet_lower = "".join(Alphabetlist)
-# Alphabet_upper = Alphabet_lower.upper()
-# Alphabet_complete = Alphabet_lower + Alphabet_upper
-
-# Alphabet = set(Alphabet_complete)
-# Numbers = set([x for x in range(0, 10)])
-# Punctuation = string.punctuation
-# Punctuation_set = set([ x for x in Punctuation])
-
-# def is_valid(s):
-#     d = True
-#     if len(s) < 2 or len(s) > 6:
-#         d = False
-#     elif s[0] not in Alphabet and s[1] not in Alphabet:
-#         d = False
-#     return d
-        
-# main()
+def first_digit_not_zero(s):
+    if count_digits(s) != -1:
+        first_digit_position = len(s) - count_digits(s)
+        if s[first_digit_position] == "0":
+            d = False
+        else:
+            d = True
+    else:
+        d = False
+    return d
+    
+print("Plate length between 2 and 6 characters?", plate_length(plate))
+print("First two characters are letters?", first_two_characters(plate))
+print("No punctuation symbols?", no_punctuation_symbols(plate))
+print("How many digits are in the plate?", count_digits(plate))
+print("String's length is:", len(plate))
+print("Is the first digit zero?", first_digit_not_zero(plate))
