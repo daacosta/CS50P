@@ -60,14 +60,17 @@ def count_digits(s):
         return -1
         
 def first_digit_not_zero(s):
-    if count_digits(s) != -1:
-        first_digit_position = len(s) - count_digits(s)
-        if s[first_digit_position] == "0":
-            d = False
+    if count_digits(s) != 0:
+        if count_digits(s) != -1:
+            first_digit_position = len(s) - count_digits(s)
+            if s[first_digit_position] == "0":
+                d = False
+            else:
+                d = True
         else:
-            d = True
+            d = False
     else:
-        d = False
+        d = True
     return d
 
 #I need to verify that all digits are together starting from the very last index (-1).
@@ -75,12 +78,15 @@ def first_digit_not_zero(s):
 #changing by -1 every time... This is cool...
 
 def digits_in_last_places_continuous(s):
-    for i in range(-1, -count_digits(s)-1, -1):
-        if s[i] in Numbers:
-            d = True
-        else:
-            d = False
-            break
+    if count_digits(s) != 0:
+        for i in range(-1, -count_digits(s)-1, -1):
+            if s[i] in Numbers:
+                d = True
+            else:
+                d = False
+                break
+    else:
+        d = True
     return d
     
 # print("Plate length between 2 and 6 characters?", plate_length(plate))
