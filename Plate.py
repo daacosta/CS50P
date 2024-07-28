@@ -1,5 +1,12 @@
 import string
 
+def main():
+    plate = input("Plate: ")
+    if is_valid(plate):
+        print("Valid")
+    else:
+        print("Invalid")
+
 Alphabetlist = [chr(i) for  i in range(97, 123)]
 Alphabet_lower = "".join(Alphabetlist)
 Alphabet_upper = Alphabet_lower.upper()
@@ -8,8 +15,6 @@ Alphabet = set(Alphabet_complete)
 Numbers = str(set([x for x in range(0, 10)]))
 Punctuation = string.punctuation
 Punctuation_set = set([ x for x in Punctuation])
-
-plate = input("Plate: ")
 
 def plate_length(s):
     d = True
@@ -70,22 +75,25 @@ def first_digit_not_zero(s):
 #changing by -1 every time... This is cool...
 
 def digits_in_last_places_continuous(s):
-    if first_digit_not_zero(s):
-        for i in range(-1, -count_digits(s)-1, -1):
-            if s[i] in Numbers:
-                d = True
-            else:
-                d = False
-                break
+    for i in range(-1, -count_digits(s)-1, -1):
+        if s[i] in Numbers:
+            d = True
+        else:
             d = False
-    else:
-        d = False
+            break
     return d
     
-print("Plate length between 2 and 6 characters?", plate_length(plate))
-print("First two characters are letters?", first_two_characters(plate))
-print("No punctuation symbols?", no_punctuation_symbols(plate))
-print("How many digits are in the plate?", count_digits(plate))
-print("String's length is:", len(plate))
-print("The first digit is not a zero?", first_digit_not_zero(plate))
-print("All digits correctly placed?", digits_in_last_places_continuous(plate))
+# print("Plate length between 2 and 6 characters?", plate_length(plate))
+# print("First two characters are letters?", first_two_characters(plate))
+# print("No punctuation symbols?", no_punctuation_symbols(plate))
+# print("How many digits are in the plate?", count_digits(plate))
+# print("String's length is:", len(plate))
+# print("The first digit is not a zero?", first_digit_not_zero(plate))
+# print("All digits correctly placed?", digits_in_last_places_continuous(plate))
+# print(plate_length(plate) and first_two_characters(plate) and no_punctuation_symbols(plate) and first_digit_not_zero(plate) and digits_in_last_places_continuous(plate))
+
+def is_valid(s):
+    d = plate_length(s) and first_two_characters(s) and no_punctuation_symbols(s) and first_digit_not_zero(s) and digits_in_last_places_continuous(s)
+    return d
+
+main()
