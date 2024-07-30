@@ -78,7 +78,7 @@ def first_digit_not_zero(s):
 #changing by -1 every time... This is cool...
 
 def digits_in_last_places_continuous(s):
-    if count_digits(s) != 0:
+    if count_digits(s) != 0 and count_digits(s) != -1:
         for i in range(-1, -count_digits(s)-1, -1):
             if s[i] in Numbers:
                 d = True
