@@ -1,8 +1,24 @@
-try:
-    text = input('Enter something --> ')
-except EOFError:
-    print('Why did you do an EOF on me?')
-except KeyboardInterrupt:
-    print('You cancelled the operation.')
-else:
-    print('You entered {}'.format(text))
+Menu = {
+    "Baja Taco": 4.25,
+    "Burrito": 7.50,
+    "Bowl": 8.50,
+    "Nachos": 11.00,
+    "Quesadilla": 8.50,
+    "Super Burrito": 8.50,
+    "Super Quesadilla": 9.50,
+    "Taco": 3.00,
+    "Tortilla Salad": 8.00
+}
+
+def main():
+    try:
+        Total = 0
+        while True:
+            text = input('Item: ').lower().title()
+            if Menu.get(text):
+                Total =+ Menu[text]
+                print(f"Total: ${Total}")
+                
+    except EOFError:
+        pass
+main()
