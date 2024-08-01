@@ -16,7 +16,7 @@ def main():
         while True:
             text = input('Item: ').lower().title()
             if Menu.get(text):
-                Total =+ Menu[text]
+                Total = Total + Menu[text]
                 print(f"Total: ${Total}")
                 
     except EOFError:
