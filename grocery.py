@@ -17,5 +17,7 @@ grocery_dict = {i:caps_list.count(i) for i in caps_list}
 
 items_list = sorted(list(grocery_dict.keys()))
 
+#print("\n")
+
 for i in range(len(items_list)):
     print(grocery_dict.get(items_list[i]),items_list[i])
