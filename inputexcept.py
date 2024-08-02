@@ -21,4 +21,5 @@ def main():
                 
     except EOFError:
         pass
+    print("\n")
 main()
