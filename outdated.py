@@ -13,9 +13,15 @@ months = [
     "December"
 ]
 
-month = input("Month: ")
-index = months.index(month)
-print(index + 1)
+# month = input("Month: ")
+# index = months.index(month)
+# print(index + 1)
+
+# The anno_domini comes in two formats: (1) Complete Month name-Space-Number-Comma-Space-Four digit Number and (2) Nomber-Slash-Number-Slash-four digit number
+
+# The second number is between 1 and 31, No restrictions for the third number, the first number goes between 1 and 12
+
+# Approach 1: Work on the format that doesn't have any strings and split the MM/DD/YYYY format to convert it into YYY-MM-DD format.  Make it work fine from the very get go...  Convert the format Month Day, Year into the format with slashes and take it from there.
 
 anno_Domini = "September 8, 1636".split(",")
 print(anno_Domini)
