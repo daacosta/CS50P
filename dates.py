@@ -18,7 +18,6 @@ def main():
     while not valid_input:
         date = input("Date: ")
         if splitters_validator(date) and whole_validator(date):
-            date_list = splitter(date)
             print(f"{rearrange_join(date)[0]}-{rearrange_join(date)[1].zfill(2)}-{rearrange_join(date)[2].zfill(2)}")
             valid_input = True
 
