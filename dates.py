@@ -31,8 +31,10 @@ def main():
 def splitters_validator(X):
     if [month for month in months if(month in X)] and X.count(",") == 1:
         return True
-    elif X.count("/") == 2:
+    elif not [month for month in months if(month in X)] and X.count("/") == 2:
         return True
+    elif [month for month in months if(month in X)] and X.count("/") != 0:
+        return False
     else:
         return False
 
